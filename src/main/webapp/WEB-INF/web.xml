@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+            http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5">
+    <display-name>Archetype Created Web Application</display-name>
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>index.htm</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!-- 上传、下载 begin-->
+    <servlet>
+        <servlet-name>UploadServlet</servlet-name>
+        <servlet-class>com.ims.uploadAndDownload.UploadServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UploadServlet</servlet-name>
+        <url-pattern>/uploadServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ListFileServlet</servlet-name>
+        <servlet-class>com.ims.uploadAndDownload.ListFileServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ListFileServlet</servlet-name>
+        <url-pattern>/ListFileServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DownLoadServlet</servlet-name>
+        <servlet-class>com.ims.uploadAndDownload.DownLoadServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DownLoadServlet</servlet-name>
+        <url-pattern>/DownLoadServlet</url-pattern>
+    </servlet-mapping>
+    <!-- 上传、下载 end-->
+
+    <!-- servlet学习：转发、重定向 begin-->
+    <servlet>
+        <servlet-name>C04LoginServlet</servlet-name>
+        <servlet-class>com.ims.c01basic.C04LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>C04LoginServlet</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+    <filter>
+        <filter-name>loginFilter</filter-name>
+        <filter-class>com.ims.c01basic.C04LoginFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>loginFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <listener>
+        <listener-class>
+            com.ims.c01basic.C04SessionAttributeListener
+        </listener-class>
+    </listener>
+    <!-- 转发、重定向 end-->
+
+    <!-- config对象初始化参数-->
+    <servlet>
+        <servlet-name>config</servlet-name>
+        <jsp-file>/01basic/02builtIn9Objects/05config.jsp</jsp-file>
+        <init-param>
+            <param-name>jdbcName</param-name>
+            <param-value>com.mysql.jdbc.Driver</param-value>
+        </init-param>
+        <init-param>
+            <param-name>dbUrl</param-name>
+            <param-value>jdbc:mysql://localhost:3306/db_xx</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>config</servlet-name>
+        <url-pattern>/config</url-pattern>
+    </servlet-mapping>
+</web-app>
