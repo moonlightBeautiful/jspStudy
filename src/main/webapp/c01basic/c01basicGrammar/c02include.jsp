@@ -13,8 +13,8 @@
 
 
 <h1>动态包含</h1>
-<jsp:include page="head.html"/>
-<p>动态包含，先把jsp编译成class文件，包含到进来，再编译一次。有多个class文件。</p>
-<jsp:include page="footer.jsp"/>
+<jsp:include page="c02head.html"/>
+<p>动态包含，先把jsp编译成class文件，然后包含进来，再编译一次。有多个class+1个class文件。</p>
+<jsp:include page="c02footer.jsp"/>
 </body>
 </html>

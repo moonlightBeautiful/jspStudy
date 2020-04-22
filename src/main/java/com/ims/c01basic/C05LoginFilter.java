@@ -5,7 +5,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-public class C04LoginFilter implements Filter {
+public class C05LoginFilter implements Filter {
 
 	public void destroy() {
 		// TODO Auto-generated method stub

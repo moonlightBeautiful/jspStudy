@@ -13,5 +13,6 @@
         System.out.println(paraName + ": " + request.getParameter(paraName));
     }
 %>
+<p>用户的一次请求</p>
 </body>
 </html>

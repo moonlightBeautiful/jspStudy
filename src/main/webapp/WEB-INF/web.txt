@@ -1,0 +1,30 @@
+
+    <!-- 上传、下载 begin-->
+    <servlet>
+        <servlet-name>UploadServlet</servlet-name>
+        <servlet-class>com.ims.uploadAndDownload.UploadServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UploadServlet</servlet-name>
+        <url-pattern>/uploadServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ListFileServlet</servlet-name>
+        <servlet-class>com.ims.uploadAndDownload.ListFileServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ListFileServlet</servlet-name>
+        <url-pattern>/ListFileServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DownLoadServlet</servlet-name>
+        <servlet-class>com.ims.uploadAndDownload.DownLoadServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DownLoadServlet</servlet-name>
+        <url-pattern>/DownLoadServlet</url-pattern>
+    </servlet-mapping>
+    <!-- 上传、下载 end-->
+</web-app>

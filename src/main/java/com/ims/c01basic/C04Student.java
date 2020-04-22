@@ -1,6 +1,6 @@
-package com.ims.model;
+package com.ims.c01basic;
 
-public class Student {
+public class C04Student {
 
 	private String name;
 	private int age;

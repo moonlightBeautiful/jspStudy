@@ -1,14 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+<%@ page isErrorPage="true" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Insert title here</title>
+    <title>异常页面</title>
 </head>
 <body>
-<jsp:forward page="target.jsp">
-    <jsp:param value="java1234" name="userName"/>
-    <jsp:param value="123456" name="password"/>
-</jsp:forward>
+<%
+    if (exception != null) {
+        out.println("程序错误信息：");
+        out.println(exception.getMessage());
+    }
+%>
+<p>
+    异常处理界面，page isErrorPage="true" ，开启exception对象
+</p>
 </body>
 </html>

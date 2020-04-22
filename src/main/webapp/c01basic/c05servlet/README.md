@@ -11,11 +11,7 @@
         实例化：init()	 用户请求到这个servlet时，实例化一个Servlet对象，只执行一次。
         服务：service()	 用户请求到这个servlet时，执行doPost或者doGet方法
         销毁：destroy()	 长时间不用，服务器会自动销毁，或者关闭服务器。
-servlet中获取session和application
-    session：
-        request.getSession
-    application：
-        this.getServletContext
+servlet中使用内置对象
 servlet转发和重定向
     转发：
         服务器内部，浏览器地址栏不改变，request数据不丢失。

@@ -7,7 +7,7 @@ import javax.servlet.http.HttpSession;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 
-public class C04LoginServlet extends HttpServlet {
+public class C05LoginServlet extends HttpServlet {
 
     /**
      *
@@ -31,12 +31,12 @@ public class C04LoginServlet extends HttpServlet {
                 session.setAttribute("message", "登陆成功！");
                 PrintWriter out = response.getWriter();
                 out.println(1111);
-                response.sendRedirect("01basic/04servlet/target.jsp");
+                response.sendRedirect("cc01basic/c05servlet/target.jsp");
             } else {
                 request.setAttribute("message", "用户名或密码错误！");
                 PrintWriter out = response.getWriter();
                 out.println(1111);
-                request.getRequestDispatcher("01basic/04servlet/target.jsp").forward(request, response);
+                request.getRequestDispatcher("c01basic/c05servlet/target.jsp").forward(request, response);
             }
         } catch (Exception e) {
             // TODO Auto-generated catch block

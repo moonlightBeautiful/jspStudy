@@ -8,5 +8,6 @@
 <%
     pageContext.getOut().print("你好");
 %>
+<p>pageContext代表当前页面的上下文对象，可以获得其他的内置对象</p>
 </body>
 </html>

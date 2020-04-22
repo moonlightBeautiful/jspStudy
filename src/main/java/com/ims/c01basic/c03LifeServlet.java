@@ -30,12 +30,12 @@ public class c03LifeServlet extends HttpServlet {
 
     @Override
     public void destroy() {
-        System.out.println("servleté”€æ¯");
+        System.out.println("servletÏú»Ù");
     }
 
     @Override
     public void init() throws ServletException {
-        System.out.println("servletåˆå§‹åŒ–");
+        System.out.println("servlet³õÊ¼»¯");
     }
 
 

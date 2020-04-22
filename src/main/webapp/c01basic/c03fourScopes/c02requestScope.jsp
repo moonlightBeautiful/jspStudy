@@ -12,6 +12,6 @@
 	request.setAttribute("name","request王二小");
 	request.setAttribute("age",12);
 %>
-<jsp:forward page="02requestTarget.jsp"></jsp:forward>
-</body>
+<jsp:forward page="c02requestTarget.jsp"></jsp:forward>
+</bodyc
 </html>
