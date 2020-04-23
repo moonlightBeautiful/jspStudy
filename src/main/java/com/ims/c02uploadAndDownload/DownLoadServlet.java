@@ -52,6 +52,11 @@ public class DownLoadServlet extends HttpServlet {
         out.close();
     }
 
+    public void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        doGet(request, response);
+    }
+
     /**
      * @param filename     要下载的文件名
      * @param saveRootPath 上传文件保存的根目录，也就是/WEB-INF/upload目录
@@ -73,8 +78,5 @@ public class DownLoadServlet extends HttpServlet {
         return dir;
     }
 
-    public void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        doGet(request, response);
-    }
+
 }

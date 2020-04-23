@@ -14,7 +14,6 @@ import java.util.Map;
  * @Description: 列出Web系统中所有下载文件
  * @author: hdb
  * @date: 2017-11-14 19:54:40
- *
  */
 public class ListFileServlet extends HttpServlet {
 
@@ -29,6 +28,11 @@ public class ListFileServlet extends HttpServlet {
         //将Map集合发送到listfile.jsp页面进行显示
         request.setAttribute("fileNameMap", fileNameMap);
         request.getRequestDispatcher("/listfile.jsp").forward(request, response);
+    }
+
+    public void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        doGet(request, response);
     }
 
     /**
@@ -60,8 +64,5 @@ public class ListFileServlet extends HttpServlet {
         }
     }
 
-    public void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        doGet(request, response);
-    }
+
 }
